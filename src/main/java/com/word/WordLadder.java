@@ -71,9 +71,9 @@ public class WordLadder {
 
     private static boolean check_str(Set<String> dict,String str1,String str2){
         if(!dict.contains(str1))
-            System.out.println("Sorry, the word "+str1+" isn't exist in our dict");
+            System.out.println("Sorry, the word "+str1+" isn't exist in our dict.");
         else if(!dict.contains(str2))
-            System.out.println("Sorry, the word "+str1+" isn't exist in our dict");
+            System.out.println("Sorry, the word "+str2+" isn't exist in our dict.");
         else if(str1.length()!=str2.length())
             System.out.println("Please input two words with the same length!");
         else
@@ -100,12 +100,8 @@ public class WordLadder {
             Stack<String> path = get_stack(dict,str1,str2);
             return display(path,str1,str2);
         }else{
-            return "words error";
+            return "";
         }
-    }
-
-    public static void main(String[] args){
-        System.out.println(get_path("cat","dog"));
     }
 }
 
