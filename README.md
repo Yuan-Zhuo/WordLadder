@@ -13,3 +13,7 @@
 1. ide: IntelliJ IDEA
 2. project structure -> Modules -> language level设置为8
 3. Settings -> Java Compiler version设为8
+
+## 使用方法
+
+1. 切换到src/main/java/com.word/WordLadder.java

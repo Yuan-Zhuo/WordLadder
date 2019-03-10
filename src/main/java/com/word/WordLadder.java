@@ -73,7 +73,7 @@ public class WordLadder {
             throw new WordLadderExpcetion("word1 error");
             //System.out.println("Sorry, the word "+str1+" isn't exist in our dict.");
         else if(!dict.contains(str2))
-            throw new WordLadderExpcetion("word1 error");
+            throw new WordLadderExpcetion("word2 error");
             //System.out.println("Sorry, the word "+str2+" isn't exist in our dict.");
         else if(str1.length()!=str2.length())
             throw new WordLadderExpcetion("length error");
