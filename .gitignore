@@ -2,7 +2,7 @@
 .idea/workspace.xml
 
 # Compiled class file
-*.class
+# *.class
 
 # Dir
-target/
+# target/
