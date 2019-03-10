@@ -12,8 +12,7 @@ public class WordLadder {
                 dict.add(file.nextLine());
             file.close();
         } catch (FileNotFoundException e) {
-            System.out.println("Sorry, the file dict.txt doesn't exist.");
-            e.printStackTrace();
+            throw new WordLadderExpcetion("read error");
         }
         return dict;
     }
@@ -69,22 +68,23 @@ public class WordLadder {
         return new Stack<String>();
     }
 
-    private static boolean check_str(Set<String> dict,String str1,String str2){
+    private static void check_str(Set<String> dict,String str1,String str2){
         if(!dict.contains(str1))
-            System.out.println("Sorry, the word "+str1+" isn't exist in our dict.");
+            throw new WordLadderExpcetion("word1 error");
+            //System.out.println("Sorry, the word "+str1+" isn't exist in our dict.");
         else if(!dict.contains(str2))
-            System.out.println("Sorry, the word "+str2+" isn't exist in our dict.");
+            throw new WordLadderExpcetion("word1 error");
+            //System.out.println("Sorry, the word "+str2+" isn't exist in our dict.");
         else if(str1.length()!=str2.length())
-            System.out.println("Please input two words with the same length!");
+            throw new WordLadderExpcetion("length error");
+            //System.out.println("Please input two words with the same length!");
         else
-            return true;
-
-        return false;
+            return;
     }
 
     private static String display(Stack<String> path,String str1,String str2){
         if(path.isEmpty()){
-            return "no path";
+            throw new WordLadderExpcetion("no path");
         }else{
             StringBuilder strPath=new StringBuilder();
             while(!path.isEmpty())
@@ -96,12 +96,11 @@ public class WordLadder {
 
     public static String get_path(String str1,String str2) {
         Set<String> dict = get_dict();
-        if(check_str(dict,str1,str2)){
-            Stack<String> path = get_stack(dict,str1,str2);
-            return display(path,str1,str2);
-        }else{
-            return "";
-        }
+        if(dict.isEmpty())
+            throw new WordLadderExpcetion("dict error");
+
+        check_str(dict,str1,str2);
+        Stack<String> path = get_stack(dict,str1,str2);
+        return display(path,str1,str2);
     }
 }
-

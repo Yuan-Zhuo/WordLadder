@@ -1,8 +1,13 @@
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class WordLadderTest {
+
+//    @Test(expected = Exception.class)
+//    public void testDivide() throws Exception
+//    {
+//        cal.divide(1, 0);
+//    }
 
     @Test
     void generate_string() {
