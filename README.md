@@ -2,6 +2,8 @@
 
 ---
 
+[![Build Status](https://travis-ci.org/Yuan-Zhuo/WordLadder.png)](https://travis-ci.org/Yuan-Zhuo/WordLadder)
+
 ## 实现功能
 
 1. 两个等长单词的Wordladder
