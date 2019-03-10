@@ -97,7 +97,7 @@ public class WordLadder {
     public static String get_path(String str1,String str2) {
         Set<String> dict = get_dict();
         if(dict.isEmpty())
-            throw new WordLadderExpcetion("dict error");
+            throw new WordLadderExpcetion("dictionary error");
 
         check_str(dict,str1,str2);
         Stack<String> path = get_stack(dict,str1,str2);

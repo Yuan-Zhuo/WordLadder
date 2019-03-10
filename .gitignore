@@ -1,0 +1,8 @@
+# Useless cache for others
+.idea/workspace .xml
+
+# Compiled class file
+*.class
+
+# Dir
+target/
