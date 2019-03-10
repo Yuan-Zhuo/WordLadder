@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="669f7dd1-45e8-402d-bd43-37021c24c8a2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/word/WordLadder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/word/WordLadder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/WordLadderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/WordLadderTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/word/WordLadder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/word/WordLadder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/WordLadderTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/WordLadderTest.class" afterDir="false" />
-    </list>
+    <list default="true" id="669f7dd1-45e8-402d-bd43-37021c24c8a2" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,7 +15,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/WordLadderTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="651">
+            <state relative-caret-position="756">
               <caret line="42" column="64" lean-forward="true" selection-start-line="42" selection-start-column="64" selection-end-line="42" selection-end-column="64" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -137,14 +130,6 @@
               <item name="WordLadder" type="b2602c69:ProjectViewProjectNode" />
               <item name="WordLadder" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="word" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WordLadder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WordLadder" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -165,7 +150,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552199052602" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552199061598" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -259,7 +244,7 @@
       <updated>1552144926185</updated>
       <workItem from="1552144927703" duration="7938000" />
       <workItem from="1552195503940" duration="2147000" />
-      <workItem from="1552197732713" duration="1092000" />
+      <workItem from="1552197732713" duration="1685000" />
     </task>
     <servers />
   </component>
@@ -296,11 +281,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11177000" />
+    <option name="totallyTimeSpent" value="11770000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25670242" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -404,7 +388,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/WordLadderTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="651">
+        <state relative-caret-position="756">
           <caret line="42" column="64" lean-forward="true" selection-start-line="42" selection-start-column="64" selection-end-line="42" selection-end-column="64" />
           <folding>
             <element signature="imports" expanded="true" />
