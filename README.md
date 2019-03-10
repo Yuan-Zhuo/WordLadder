@@ -16,4 +16,9 @@
 
 ## 使用方法
 
-1. 切换到src/main/java/com.word/WordLadder.java
+1. 切换到src/main/java/Run.java执行wordladder运行程序
+2. 切换到src/test/java/WordLadderTest.java执行wordladder测试程序
+
+## 注
+
+__因为换过github账号，所以显示两个contributor__
