@@ -2,7 +2,7 @@
 
 ---
 
-[![Build Status](https://travis-ci.org/Yuan-Zhuo/WordLadder.svg?branch=masterg)](https://travis-ci.org/Yuan-Zhuo/WordLadder)
+[![Build Status](https://travis-ci.org/Yuan-Zhuo/WordLadder.svg?branch=master)](https://travis-ci.org/Yuan-Zhuo/WordLadder)
 
 ## 实现功能
 
