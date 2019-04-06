@@ -1,4 +1,4 @@
-package hello;
+package com.yuan;
 
 public class Greeting {
 

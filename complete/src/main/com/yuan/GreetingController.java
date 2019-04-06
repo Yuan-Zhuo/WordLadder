@@ -1,5 +1,4 @@
-package hello;
-
+package com.yuan;
 import java.util.concurrent.atomic.AtomicLong;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -8,15 +7,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class GreetingController {
 
-    private static final String template = "Hello, %s %d!";
     private final AtomicLong counter = new AtomicLong();
 
-    @RequestMapping("/greeting")
-    public Greeting greeting
-            (@RequestParam(value="name", defaultValue="World") String name,
-            @RequestParam(value="year", defaultValue="2010") int year)
-    {
+    @RequestMapping("/wordladder")
+    public Greeting greeting(@RequestParam(value="name", defaultValue="World") String name) {
         return new Greeting(counter.incrementAndGet(),
-                            String.format(template, name,year));
+                            String.format(template, name));
     }
 }
