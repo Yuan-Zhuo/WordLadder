@@ -2,6 +2,8 @@
 
 ---
 
+![](https://travis-ci.org/Yuan-Zhuo/WordLadder.svg?branch=develop)
+
 ## Tutorial
 
 1. _mvn package:_<br>
@@ -46,6 +48,9 @@ src\test\java\com.yuan.test
 - 第二部分： Web 层测试，测试对前端请求响应和异常处理
 
 3. 代码覆盖率
+
+使用了 intellij 自带的分析工具，结果：
+![](img/cov.png)
 
 ## gitflow workflow
 
