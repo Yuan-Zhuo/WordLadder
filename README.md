@@ -52,8 +52,6 @@ src\test\java\com.yuan.test
 使用了 intellij 自带的分析工具，结果：
 ![](img/cov.png)
 
-> > > > > > > develop
-
 ## gitflow workflow
 
 0. 初始化
