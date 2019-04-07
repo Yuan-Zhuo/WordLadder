@@ -49,8 +49,6 @@ src\test\java\com.yuan.test
 
 3. 代码覆盖率
 
-# <<<<<<< HEAD
-
 使用了 intellij 自带的分析工具，结果：
 ![](img/cov.png)
 
