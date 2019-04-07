@@ -1,26 +1,31 @@
-# WordLadder in Java
+# wordladder by spring-boot
 
 ---
 
-[![Build Status](https://travis-ci.org/Yuan-Zhuo/WordLadder.svg?branch=master)](https://travis-ci.org/Yuan-Zhuo/WordLadder)
+## gitflow workflow
 
-## 实现功能
+1. 初始化
 
-1. 两个等长单词的Wordladder
-2. 使用项目管理Maven
-3. 加入单元测试JUnit
+清空以前记录
 
-## clone后可能的问题
+```
+git checkout --orphan latest_branch
+git add -A
+git commit -am "back to hw1"
+git branch -D master
+git branch -m master
+git push -f origin master
+```
 
-1. ide: IntelliJ IDEA
-2. project structure -> Modules -> language level设置为8
-3. Settings -> Java Compiler version设为8
+标记
 
-## 使用方法
+```
+git tag v1.0
+git push origin --tag
+```
 
-1. 切换到src/main/java/Run.java执行wordladder运行程序
-2. 切换到src/test/java/WordLadderTest.java执行wordladder测试程序
+gitflow
 
-## 注
-
-__因为换过github账号，所以显示两个contributor__
+```
+git flow init
+```
