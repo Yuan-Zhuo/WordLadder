@@ -1,8 +1,29 @@
-# Useless cache for others
-.idea/workspace.xml
+HELP.md
+/target/
+!.mvn/wrapper/maven-wrapper.jar
 
-# Compiled class file
-*.class
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
 
-# Dir
-target/
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+/build/
+
+### VS Code ###
+.vscode/

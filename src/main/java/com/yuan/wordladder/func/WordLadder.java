@@ -1,4 +1,4 @@
-package com.word;
+package com.yuan.wordladder.func;
 
 import java.util.*;
 import java.io.*;
@@ -7,12 +7,12 @@ public class WordLadder {
     private static Set<String> get_dict() {
         Set<String> dict=new HashSet<String>();
         try {
-            Scanner file = new Scanner(new File("src/bin/dict.txt"));
+            Scanner file = new Scanner(new File("src/data/dict.txt"));
             while (file.hasNextLine())
                 dict.add(file.nextLine());
             file.close();
         } catch (FileNotFoundException e) {
-            throw new WordLadderExpcetion("read error");
+            throw new WordLadderException("#read error");
         }
         return dict;
     }
@@ -68,27 +68,24 @@ public class WordLadder {
         return new Stack<String>();
     }
 
-    private static void check_str(Set<String> dict,String str1,String str2){
+    private static String check_str(Set<String> dict,String str1,String str2){
         if(!dict.contains(str1))
-            throw new WordLadderExpcetion("word1 error");
-            //System.out.println("Sorry, the word "+str1+" isn't exist in our dict.");
+            return "#word1 error";
         else if(!dict.contains(str2))
-            throw new WordLadderExpcetion("word2 error");
-            //System.out.println("Sorry, the word "+str2+" isn't exist in our dict.");
+            return "#word2 error";
         else if(str1.length()!=str2.length())
-            throw new WordLadderExpcetion("length error");
-            //System.out.println("Please input two words with the same length!");
+            return "#length error";
         else
-            return;
+            return "";
     }
 
     private static String display(Stack<String> path,String str1,String str2){
         if(path.isEmpty()){
-            throw new WordLadderExpcetion("no path");
+            return "#no path";
         }else{
             StringBuilder strPath=new StringBuilder();
             while(!path.isEmpty())
-                strPath.append(path.pop()+" ");
+                strPath.append(path.pop()+"\t");
             strPath.deleteCharAt(strPath.length()-1);
             return strPath.toString();
         }
@@ -97,10 +94,19 @@ public class WordLadder {
     public static String get_path(String str1,String str2) {
         Set<String> dict = get_dict();
         if(dict.isEmpty())
-            throw new WordLadderExpcetion("dictionary error");
+            return "#dictionary error";
 
-        check_str(dict,str1,str2);
-        Stack<String> path = get_stack(dict,str1,str2);
+        String msg=check_str(dict,str1,str2);
+        Stack<String> path;
+        if(msg.equals(""))
+            path = get_stack(dict,str1,str2);
+        else
+            return msg;
+
         return display(path,str1,str2);
+    }
+
+    public static void main(String[] args) {
+        System.out.println(get_path("cat","dog"));
     }
 }

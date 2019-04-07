@@ -4,9 +4,8 @@
 
 ## gitflow workflow
 
-1. 初始化
-
-清空以前记录
+0. 初始化
+   清空以前记录
 
 ```
 git checkout --orphan latest_branch
@@ -17,15 +16,20 @@ git branch -m master
 git push -f origin master
 ```
 
-标记
+1. v1.0
 
 ```
 git tag v1.0
 git push origin --tag
 ```
 
-gitflow
-
 ```
 git flow init
+```
+
+2. v2.0
+
+```
+git flow release start basic-func
+git flow release finish basic-func
 ```

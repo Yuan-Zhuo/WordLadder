@@ -1,20 +1,19 @@
-package com.word;
+package com.yuan.wordladder.func;
 
-public class WordLadderExpcetion extends RuntimeException {
-
+public class WordLadderException extends RuntimeException {
     private String retCd;
     private String msgDes;
 
-    public WordLadderExpcetion() {
+    public WordLadderException() {
         super();
     }
 
-    public WordLadderExpcetion(String message) {
+    public WordLadderException(String message) {
         super(message);
         msgDes = message;
     }
 
-    public WordLadderExpcetion(String retCd, String msgDes) {
+    public WordLadderException(String retCd, String msgDes) {
         super();
         this.retCd = retCd;
         this.msgDes = msgDes;
@@ -27,5 +26,4 @@ public class WordLadderExpcetion extends RuntimeException {
     public String getMsgDes() {
         return msgDes;
     }
-
 }
