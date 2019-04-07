@@ -2,7 +2,7 @@
 
 ---
 
-![](https://travis-ci.org/Yuan-Zhuo/WordLadder.svg?branch=develop)
+![](https://travis-ci.org/Yuan-Zhuo/WordLadder.svg?branch=master)
 
 ## Tutorial
 
