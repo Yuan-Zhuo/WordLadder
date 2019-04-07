@@ -33,3 +33,14 @@ git flow init
 git flow release start basic-func
 git flow release finish basic-func
 ```
+
+3. v2.1
+
+尝试 hotfix
+
+```
+git flow hotfix start basic-cond
+git flow hotfix start basic-cond
+```
+
+- 为展示流程， publish 了上述 branch
