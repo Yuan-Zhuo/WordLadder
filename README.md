@@ -44,7 +44,7 @@ http://localhost:8080/?word1=cat&word2=dog
 
 ![](img/chrome.png)
 
-- post header 添加:
+- post header 添加:<br>
   key | value
   --- | ---
   Cookie | JSESSIONID=**cookie**
