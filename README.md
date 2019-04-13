@@ -12,7 +12,16 @@
 2. _mvn spring-boot:run_<br>
    在本地启动项目
 
-3. _postman send_:<br>
+3. _login_<br>
+
+```js
+http://localhost:8080/login.html
+```
+
+用户名：任意
+密码：123456
+
+4. _wordladder_<br>
 
 url format:
 
@@ -46,6 +55,10 @@ src\test\java\com.yuan.test
 - 第一部分： Service 层测试，测试功能函数的执行和边界条件
 
 - 第二部分： Web 层测试，测试对前端请求响应和异常处理
+
+- 第三部分： Security 层测试，测试登陆前后台资源的保护，包括以.html 结尾的访问重定向到 login 页面，其余访问提示资源不可访问
+
+- 第四部分： Actuator 层测试，测试对各个页面的访问情况是否正常
 
 3. 代码覆盖率
 
@@ -100,5 +113,14 @@ git flow hotfix start basic-cond
 4. v3.0
 
 测试实现
+
+5. v4.0
+
+实现 spring security 和 spring actuator
+在 develop 分支实现
+
+```git
+pull request
+```
 
 - 为展示流程， publish 了上述 branch
