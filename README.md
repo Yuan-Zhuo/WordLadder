@@ -12,7 +12,9 @@
 2. _mvn spring-boot:run_<br>
    在本地启动项目
 
-3. _login_<br>
+3. _normal using_<br>
+
+访问
 
 ```js
 http://localhost:8080/login.html
@@ -21,8 +23,7 @@ http://localhost:8080/login.html
 用户名：任意
 密码：123456
 
-4. _wordladder_<br>
-
+然后请求：
 url format:
 
 ```js
@@ -35,7 +36,22 @@ http://localhost:8080/?word1={str1}&word2={str2}
 http://localhost:8080/?word1=cat&word2=dog
 ```
 
-![](img/run.png)
+得到 wordladder
+
+4. _postman post_
+
+- 获取 chrome 登录后 cookie:
+
+![](img/chrome.png)
+
+- post header 添加:
+  key| value
+  ---| ---
+  Cookie | JSESSIONID=**cookie**
+
+然后访问
+
+![](img/cookie.png)
 
 ## Unit Test
 
@@ -65,6 +81,41 @@ src\test\java\com.yuan.test
 使用了 intellij 自带的分析工具，结果：
 ![](img/cov.png)
 
+## spring actuator
+
+1. info
+
+添加了项目信息
+
+![](img/info.png)
+
+2. health
+
+添加了健康监视
+
+![](img/health.png)
+
+3. shutdown
+
+允许终止程序
+
+![](img/shutdown.png)
+
+## spring security
+
+1. 保护
+
+非.html 结尾请求重定位到 404 页面
+
+![](img/404.png)
+.html 结尾请求重定位到 login 页面
+![](img/login.png)
+
+2. 用户自定义
+   用户名任意，密码指定
+
+![](img/user.png)
+
 ## gitflow workflow
 
 0. 初始化
@@ -81,14 +132,14 @@ git push -f origin master
 
 1. v1.0
 
-上次作业进度
+第一次作业进度
 
-```
+```git
 git tag v1.0
 git push origin --tag
 ```
 
-```
+```git
 git flow init
 ```
 
@@ -96,7 +147,7 @@ git flow init
 
 基本功能实现
 
-```
+```git
 git flow release start basic-func
 git flow release finish basic-func
 ```
@@ -105,22 +156,45 @@ git flow release finish basic-func
 
 修复 bug
 
-```
+```git
 git flow hotfix start basic-cond
 git flow hotfix start basic-cond
 ```
 
 4. v3.0
 
-测试实现
+测试实现，第二次作业进度
 
 5. v4.0
 
 实现 spring security 和 spring actuator
-在 develop 分支实现
+在 develop 分支实现，第三次作业完成
+
+- pull request
+- merge
+- conflict resolve(github desktop+vscode 提供比对 merge)
+
+6. tips
+
+- 提交本地所有 tag
+
+```
+git push origin --tags
+```
+
+- 最新一次提交转移到 hotfix
 
 ```git
-pull request
+git flow hotfix start fix-commit
+git checkout master
+git reset --hard HEAD^
 ```
 
 - 为展示流程， publish 了上述 branch
+
+- 为展示流程，提了一个 PR 并 merge 了
+  ![](img/merge.png)
+
+## continuous integration
+
+![](img/ci.png)
