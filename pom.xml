@@ -8,7 +8,7 @@
         <version>2.1.4.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.yuan</groupId>
+    <groupId>cc.mrbird</groupId>
     <artifactId>wordladder</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>wordladder</name>
