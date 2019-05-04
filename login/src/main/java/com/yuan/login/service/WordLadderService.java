@@ -16,7 +16,7 @@ public class WordLadderService {
         //1.获得一个httpclient对象
         CloseableHttpClient httpClient = HttpClients.createDefault();
         //2.生成一个get请求
-        String url = "http://localhost:4040/api/search?word1=" + str1 + "&word2=" + str2;
+        String url = "http://172.17.0.2:8080/api/search?word1=" + str1 + "&word2=" + str2;
         HttpGet httpGet = new HttpGet(url);
         CloseableHttpResponse response = null;
         try {
