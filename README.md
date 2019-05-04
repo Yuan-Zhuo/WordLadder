@@ -46,7 +46,33 @@ http://localhost:8000/wordladder/search?word1={str1}&word2={str2}
 
 ### Docker
 
-1. Nerwork
+1. Repo
+
+- [yuanzhuo\word-ladder-login](https://hub.docker.com/r/yuanzhuo/word-ladder-login)
+
+- [yuanzhuo\word-ladder-func](https://hub.docker.com/r/yuanzhuo/word-ladder-func)
+
+2. Dockerfile
+
+- login
+
+```
+FROM openjdk:8
+EXPOSE 8080
+COPY ./login-0.0.1-SNAPSHOT.jar /home/login.jar
+ENTRYPOINT [ "java", "-jar", "/home/login.jar" ]
+```
+
+- func
+
+```
+FROM openjdk:8
+EXPOSE 8080
+COPY ./wordladder-0.0.1-SNAPSHOT.jar /home/wordladder.jar
+ENTRYPOINT [ "java", "-jar", "/home/wordladder.jar" ]
+```
+
+3. Nerwork
 
 ```js
 docker inspect --format='{{.NetworkSettings.IPAddress}}' {container ID}
@@ -57,12 +83,6 @@ wordladder 服务获取地址为
 ```css
 172.17.0.2
 ```
-
-2. Repo
-
-- [yuanzhuo\word-ladder-login](https://cloud.docker.com/repository/docker/yuanzhuo/word-ladder-login)
-
-- [yuanzhuo\word-ladder-func](https://cloud.docker.com/repository/docker/yuanzhuo/word-ladder-func)
 
 ### Detail
 
