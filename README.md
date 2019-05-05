@@ -6,15 +6,15 @@
 
 1. 新建网络
 
-```js
+```
 docker network create -d bridge wordladder
 ```
 
 2. 添加容器
 
-```js
-docker run -d -p 8080:8080 --name hub-word-ladder-func yuanzhuo/word-ladder-func:v1.0 --network wordladder
-docker run -d -p 8000:8000 --name word-ladder-login hub-yuanzhuo/word-ladder-login:v1.0 --network wordladder
+```
+docker run -itd -P --name hub-word-ladder-func yuanzhuo/word-ladder-func:v1.0 --network wordladder
+docker run -itd -p 8080:8000 --link=hub-word-ladder-func:wordladder --name hub-word-ladder-login yuanzhuo/word-ladder-login:v2.0 --network wordladder
 ```
 
 <img src="./img/login_docker.png" width = "300" height = "200" alt=""/>
@@ -23,16 +23,16 @@ docker run -d -p 8000:8000 --name word-ladder-login hub-yuanzhuo/word-ladder-log
 
 3. 访问服务
 
-- [login](http://localhost:8000/login.html)<br>
+- login:[http://localhost:8080/login.html](http://localhost:8080/login.html)<br>
 
 <img src="./img/login.png" width = "300" height = "200" alt=""/>
 
 用户名：任意；密码：123456
 
-- wordladder url format
+- wordladder url format:
 
 ```
-http://localhost:8000/wordladder/search?word1={str1}&word2={str2}
+http://localhost:8080/wordladder/search?word1={str1}&word2={str2}
 ```
 
 <img src="./img/server.png" width = "300" height = "200" alt=""/>
@@ -70,18 +70,6 @@ FROM openjdk:8
 EXPOSE 8080
 COPY ./wordladder-0.0.1-SNAPSHOT.jar /home/wordladder.jar
 ENTRYPOINT [ "java", "-jar", "/home/wordladder.jar" ]
-```
-
-3. Nerwork
-
-```js
-docker inspect --format='{{.NetworkSettings.IPAddress}}' {container ID}
-```
-
-wordladder 服务获取地址为
-
-```css
-172.17.0.2
 ```
 
 ### Detail
